@@ -3,6 +3,9 @@
   "version": 2,
   "projects": {
     "my-ecommerce": "apps/my-ecommerce",
-    "my-ecommerce-e2e": "apps/my-ecommerce-e2e"
-  }
+    "my-ecommerce-e2e": "apps/my-ecommerce-e2e",
+    "ui-angular": "libs/ui-angular",
+    "ui-angular-e2e": "apps/ui-angular-e2e"
+  },
+  "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"]
 }
