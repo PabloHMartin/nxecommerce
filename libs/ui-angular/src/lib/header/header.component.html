@@ -15,6 +15,8 @@
         mat-fab
         color="primary"
         aria-label="click to check your cart"
+        [matBadge]="totalProductsInCart > 0 ? totalProductsInCart : ''"
+        matBadgeColor="warn"
         (click)="onOpenCart()"
       >
         <img [src]="cartIconUrl" alt="cart-icon" />

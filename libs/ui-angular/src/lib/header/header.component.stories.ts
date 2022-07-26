@@ -3,13 +3,19 @@ import { HeaderComponent } from './header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 
 export default {
   title: 'HeaderComponent',
   component: HeaderComponent,
   decorators: [
     moduleMetadata({
-      imports: [MatToolbarModule, MatButtonModule, MatMenuModule],
+      imports: [
+        MatToolbarModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatBadgeModule,
+      ],
     }),
   ],
   argTypes: { onOpenCart: { action: 'cart btn clicked' } },
@@ -25,4 +31,5 @@ Primary.args = {
   color: '',
   logoUrl: 'img/bike.png',
   cartIconUrl: 'img/cart-icon.svg',
+  totalProductsInCart: 0,
 };
