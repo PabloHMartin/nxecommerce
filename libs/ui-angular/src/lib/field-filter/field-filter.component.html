@@ -1,0 +1,10 @@
+<div class="filter-title">{{ filterTitle }}</div>
+
+<mat-selection-list #fields>
+  <mat-list-option
+    *ngFor="let field of fieldNames"
+    (click)="clickFilter(field)"
+  >
+    {{ field }}
+  </mat-list-option>
+</mat-selection-list>
