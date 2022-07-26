@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Major+Mono+Display&family=Roboto+Mono:wght@200;400&display=swap');
+
+.body {
+  background-color: green !important;
+}
