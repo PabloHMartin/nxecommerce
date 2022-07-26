@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ecommerce/data": ["libs/data/src/index.ts"],
       "@ecommerce/ui-angular": ["libs/ui-angular/src/index.ts"]
     }
   },

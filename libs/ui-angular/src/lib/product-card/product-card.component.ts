@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../../../../assets/models/Product.model';
+import { Product } from '@ecommerce/data';
 @Component({
   selector: 'ecommerce-product-card',
   templateUrl: './product-card.component.html',
