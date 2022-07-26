@@ -1,0 +1,40 @@
+.toolbar {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0 1rem 0;
+  &__logo {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    &__img {
+      margin-right: 1rem;
+      img {
+        width: 25px;
+      }
+    }
+    &__info {
+      &__title {
+        font-family: 'Amatic SC', cursive;
+        font-size: 25px;
+      }
+    }
+  }
+
+  &__cart {
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 18px;
+        object-fit: contain;
+      }
+    }
+  }
+}

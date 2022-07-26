@@ -1,0 +1,26 @@
+<mat-toolbar class="toolbar" [ngStyle]="{ 'background-color': color }">
+  <a routerLink="/">
+    <div class="toolbar__logo">
+      <div class="toolbar__logo__img">
+        <img [src]="logoUrl" alt="logo" />
+      </div>
+      <div class="toolbar__logo__info">
+        <div class="toolbar__logo__info__title">{{ title }}</div>
+      </div>
+    </div>
+  </a>
+  <div class="toolbar__cart">
+    <div class="toolbar__userdata__btn">
+      <button
+        mat-fab
+        color="primary"
+        aria-label="click to check your cart"
+        [matBadge]="totalProductsInCart > 0 ? totalProductsInCart : ''"
+        matBadgeColor="warn"
+        (click)="onOpenCart()"
+      >
+        <img [src]="cartIconUrl" alt="cart-icon" />
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
