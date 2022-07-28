@@ -1,1 +1,5 @@
-<p>catalog works!</p>
+<ng-container *ngIf="loaded$ | async">
+  <ng-container *ngFor="let productItem of products$ | async">
+    <ecommerce-product-card [product]="productItem"></ecommerce-product-card>
+  </ng-container>
+</ng-container>
