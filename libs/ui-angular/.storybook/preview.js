@@ -17,3 +17,4 @@ export const parameters = {
 //     theme,
 //   },
 // });
+configure(require.context('../../ui-angular', true, /\.stories\.ts?$/), module);
