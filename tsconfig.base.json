@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ecommerce/data": ["libs/data/src/index.ts"],
+      "@ecommerce/redux": ["libs/redux/src/index.ts"],
       "@ecommerce/ui-angular": ["libs/ui-angular/src/index.ts"]
     }
   },
