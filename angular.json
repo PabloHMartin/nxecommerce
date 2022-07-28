@@ -5,6 +5,7 @@
     "data": "libs/data",
     "my-ecommerce": "apps/my-ecommerce",
     "my-ecommerce-e2e": "apps/my-ecommerce-e2e",
+    "redux": "libs/redux",
     "ui-angular": "libs/ui-angular",
     "ui-angular-e2e": "apps/ui-angular-e2e"
   },
