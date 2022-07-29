@@ -10,6 +10,7 @@ export interface ProductsState extends EntityState<ProductsEntity> {
   selectedId?: string | number; // which Products record has been selected
   loaded: boolean; // has the Products list been loaded
   error?: string | null; // last known error (if any)
+  cart?: ProductsEntity[];
 }
 
 export interface ProductsPartialState {
@@ -31,6 +32,7 @@ const reducer = createReducer(
     ...state,
     loaded: false,
     error: null,
+    cart: [],
   })),
   on(ProductsActions.loadProductsSuccess, (state, { products }) =>
     productsAdapter.setAll(products, { ...state, loaded: true })
@@ -38,6 +40,10 @@ const reducer = createReducer(
   on(ProductsActions.loadProductsFailure, (state, { error }) => ({
     ...state,
     error,
+  })),
+  on(ProductsActions.addProductToCart, (state, action) => ({
+    ...state,
+    cart: [...(state.cart || []), action.product],
   }))
 );
 

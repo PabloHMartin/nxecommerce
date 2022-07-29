@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="product-card">
   <mat-card-title-group>
     <mat-card-title>{{ product.name }}</mat-card-title>
     <mat-card-subtitle>{{
@@ -9,4 +9,9 @@
   <mat-card-content>
     {{ product.desc }}
   </mat-card-content>
+  <mat-card-footer class="product-card__footer">
+    <button mat-raised-button color="primary" (click)="onAddToCart(product)">
+      Add to cart
+    </button>
+  </mat-card-footer>
 </mat-card>

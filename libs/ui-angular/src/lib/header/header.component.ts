@@ -19,7 +19,7 @@ export class HeaderComponent {
   cartIconUrl!: string;
 
   @Input()
-  totalProductsInCart!: number;
+  totalProductsInCart!: number | null | undefined;
 
   @Output() cartClick: EventEmitter<boolean> = new EventEmitter();
 
