@@ -24,10 +24,6 @@ interface TestSchema {
 describe('ProductsFacade', () => {
   let facade: ProductsFacade;
   let store: Store<TestSchema>;
-  const createProductsEntity = (id: string, name = ''): ProductsEntity => ({
-    id,
-    name: name || `name-${id}`,
-  });
 
   describe('used in NgModule', () => {
     beforeEach(() => {
@@ -71,29 +67,6 @@ describe('ProductsFacade', () => {
       isLoaded = await readFirst(facade.loaded$);
 
       expect(list.length).toBe(0);
-      expect(isLoaded).toBe(true);
-    });
-
-    /**
-     * Use `loadProductsSuccess` to manually update list
-     */
-    it('allProducts$ should return the loaded list; and loaded flag == true', async () => {
-      let list = await readFirst(facade.allProducts$);
-      let isLoaded = await readFirst(facade.loaded$);
-
-      expect(list.length).toBe(0);
-      expect(isLoaded).toBe(false);
-
-      store.dispatch(
-        ProductsActions.loadProductsSuccess({
-          products: [createProductsEntity('AAA'), createProductsEntity('BBB')],
-        })
-      );
-
-      list = await readFirst(facade.allProducts$);
-      isLoaded = await readFirst(facade.loaded$);
-
-      expect(list.length).toBe(2);
       expect(isLoaded).toBe(true);
     });
   });

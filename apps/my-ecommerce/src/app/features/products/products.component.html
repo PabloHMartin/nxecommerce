@@ -1,8 +1,10 @@
-<ecommerce-header
-  title="Amsterdam BIKES"
-  logoUrl="/assets/data/bike.png"
-  cartIconUrl="/assets/data/cart-icon.svg"
-  color="white"
-  [totalProductsInCart]="3"
-></ecommerce-header>
+<div class="header">
+  <ecommerce-header
+    title="Amsterdam BIKES"
+    logoUrl="/assets/data/bike.png"
+    cartIconUrl="/assets/data/cart-icon.svg"
+    color="white"
+    [totalProductsInCart]="cartCount$ | async"
+  ></ecommerce-header>
+</div>
 <router-outlet></router-outlet>
