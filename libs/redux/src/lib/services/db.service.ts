@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '@ecommerce/data';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 const API_URI = 'http://localhost:3000';
 

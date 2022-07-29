@@ -1,15 +1,17 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { ProductCardComponent } from './product-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 export default {
   title: 'ProductCardComponent',
   component: ProductCardComponent,
   decorators: [
     moduleMetadata({
-      imports: [MatCardModule],
+      imports: [MatCardModule, MatButtonModule],
     }),
   ],
+  argTypes: { addToCart: { action: 'addToCart' } },
 } as Meta<ProductCardComponent>;
 
 const Template: Story<ProductCardComponent> = (args: ProductCardComponent) => ({

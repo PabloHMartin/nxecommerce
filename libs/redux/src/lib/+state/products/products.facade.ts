@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from '@ecommerce/data';
 import { select, Store, Action } from '@ngrx/store';
 
 import * as ProductsActions from './products.actions';
@@ -14,6 +15,7 @@ export class ProductsFacade {
   loaded$ = this.store.pipe(select(ProductsSelectors.getProductsLoaded));
   allProducts$ = this.store.pipe(select(ProductsSelectors.getAllProducts));
   selectedProducts$ = this.store.pipe(select(ProductsSelectors.getSelected));
+  cartCount$ = this.store.pipe(select(ProductsSelectors.getCountCart));
 
   constructor(private readonly store: Store) {}
 
@@ -23,5 +25,8 @@ export class ProductsFacade {
    */
   init() {
     this.store.dispatch(ProductsActions.initProducts());
+  }
+  addProductToCart(product: Product): void {
+    this.store.dispatch(ProductsActions.addProductToCart({ product }));
   }
 }

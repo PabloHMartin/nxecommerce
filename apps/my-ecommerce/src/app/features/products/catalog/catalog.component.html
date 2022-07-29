@@ -1,1 +1,10 @@
-<p>catalog works!</p>
+<ng-container *ngIf="loaded$ | async">
+  <div class="products-grid">
+    <ng-container *ngFor="let productItem of products$ | async">
+      <ecommerce-product-card
+        [product]="productItem"
+        (addToCart)="addProductToCart($event)"
+      ></ecommerce-product-card>
+    </ng-container>
+  </div>
+</ng-container>
